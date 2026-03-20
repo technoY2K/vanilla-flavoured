@@ -11,9 +11,10 @@
 /* --- design tokens --- */
 
 :root {
-  --color-bg: #fafafa;
-  --color-text: #1a1a1a;
-  --color-muted: #6b7280;
+  color-scheme: dark;
+  --color-bg: #0a0f1e;
+  --color-text: #f1f5f9;
+  --color-muted: #94a3b8;
   --font-sans: system-ui, -apple-system, sans-serif;
   --font-mono: ui-monospace, "SF Mono", monospace;
   --space-sm: 0.5rem;

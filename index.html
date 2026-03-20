@@ -12,32 +12,35 @@
     </header>
 
     <main>
-      <p>Vanilla flavored — HTML, CSS, and JavaScript, straight from the browser.</p>
-
-      <section class="counter">
-        <h2>Look ma, no React ☢️</h2>
-        <button class="counter-btn" data-action="decrement">−</button>
-        <span class="counter-value">0</span>
-        <button class="counter-btn" data-action="increment">+</button>
+      <section class="hero">
+        <p>Vanilla flavored — HTML, CSS, and JavaScript, straight from the browser.</p>
       </section>
 
-      <vanilla-carousel>
-        <span slot="heading">Swiper be Gone!</span>
-        <img src="https://picsum.photos/id/10/800/450" alt="Landscape 1" />
-        <img src="https://picsum.photos/id/29/800/450" alt="Landscape 2" />
-        <img src="https://picsum.photos/id/42/800/450" alt="Landscape 3" />
-      </vanilla-carousel>
+      <section class="row">
+        <vanilla-counter min="-100" alert-at="-10">
+          <span slot="heading">Look ma, no React ☢️</span>
+        </vanilla-counter>
+      </section>
+
+      <section class="row">
+        <vanilla-carousel>
+          <span slot="heading">Swiper be Gone!</span>
+          <img src="https://picsum.photos/id/10/800/450" alt="Landscape 1" />
+          <img src="https://picsum.photos/id/29/800/450" alt="Landscape 2" />
+          <img src="https://picsum.photos/id/42/800/450" alt="Landscape 3" />
+        </vanilla-carousel>
+      </section>
+
+      <section class="row">
+        <vanilla-sparkles count="40">
+          <span slot="heading">It's Magic</span>
+        </vanilla-sparkles>
+      </section>
     </main>
 
     <footer>
       <small>&copy; 2026</small>
     </footer>
-
-    <dialog class="alert">
-      <p>Uh oh, we need a framework</p>
-      <button class="alert-close">Just kidding</button>
-    </dialog>
-
     <script type="module" src="/main.js"></script>
   </body>
 </html>

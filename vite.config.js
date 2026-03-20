@@ -1,10 +1,9 @@
 import { defineConfig } from "vite";
+import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
-  build: {
-    outDir: "dist",
-  },
   plugins: [
+    cloudflare(),
     process.env.ANALYZE &&
       import("rollup-plugin-visualizer").then((m) =>
         m.visualizer({ open: true, gzipSize: true, brotliSize: true })

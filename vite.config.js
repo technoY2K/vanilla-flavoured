@@ -1,15 +1,13 @@
 import { defineConfig } from "vite";
-import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
   build: {
     outDir: "dist",
   },
   plugins: [
-    visualizer({
-      open: true,
-      gzipSize: true,
-      brotliSize: true,
-    }),
+    process.env.ANALYZE &&
+      import("rollup-plugin-visualizer").then((m) =>
+        m.visualizer({ open: true, gzipSize: true, brotliSize: true })
+      ),
   ],
 });

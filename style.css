@@ -1,0 +1,53 @@
+/* --- reset --- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- design tokens --- */
+
+:root {
+  --color-bg: #fafafa;
+  --color-text: #1a1a1a;
+  --color-muted: #6b7280;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", monospace;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --max-width: 48rem;
+}
+
+/* --- base --- */
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* --- layout --- */
+
+header,
+main,
+footer {
+  width: min(100%, var(--max-width));
+  margin-inline: auto;
+  padding: var(--space-lg);
+}
+
+footer {
+  color: var(--color-muted);
+}

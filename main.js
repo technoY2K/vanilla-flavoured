@@ -1,3 +1,3 @@
-import "./counter.js";
-import "./carousel.js";
-import "./sparkles.js";
+import "./components/counter.js";
+import "./components/carousel.js";
+import "./components/sparkles.js";
